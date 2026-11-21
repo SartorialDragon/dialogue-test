@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpbq5goqhb2jj"]
+
+[ext_resource type="Script" uid="uid://ci02rdrg2fr83" path="res://world.gd" id="1_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://d4gfitx110qn8" path="res://dialogue_ui.tscn" id="2_tlwt5"]
+
+[node name="World" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fj7yv")
+
+[node name="ClueDialogue" parent="." instance=ExtResource("2_tlwt5")]
+visible = false
+
+[node name="VAAudio" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
